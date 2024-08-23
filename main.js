@@ -81,3 +81,11 @@ ScrollReveal().reveal(".download__links", {
   ...scrollRevealOption,
   delay: 1500,
 });
+
+
+/*PRELOADER JS*/
+$(window).on('load', function() {  
+  $('.spinner').fadeOut();
+  $('.preloader').delay(350).fadeOut('slow');
+}
+ 

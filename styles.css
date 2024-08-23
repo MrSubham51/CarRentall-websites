@@ -158,7 +158,6 @@ h4 {
 }
 
 .section__header {
-  background-color: #f7f4e4;
   font-size: 2.5rem;
   font-weight: 800;
   color: var(--text-dark);
@@ -178,7 +177,7 @@ h4 {
 }
 
 .btn:hover {
-  background-color: #3c4286;
+  background-color: #d6e75b;
 }
 
 img {
@@ -197,7 +196,7 @@ ul {
 
 html,
 body {
-  scroll-behavior: smooth;
+  scroll-behavior: s;
 }
 
 body {
@@ -242,9 +241,120 @@ nav {
   color: var(--white);
 }
 
+/* == Hearder social ==*/
+
+/* Social Header Styles */
+
+.section__container_bar {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  background-color: #c2daf4; /* Light background for contrast */
+
+}
+
+.icons {
+  display: flex;
+  gap: 25px; /* Space between icons */
+  margin-top: 10px;
+  align-items: flex-end;
+}
+
+.icons a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s; /* Smooth transition for hover */
+}
+
+.icons a .layer {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  background-color: #eaa5a5; /* Background for the icon */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(203, 38, 38, 0.1); /* Shadow for 3D effect */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.icons a .layer .fab {
+  font-size: 30px;
+  color: #d63636; /* Icon color */
+  background-attachment: fixed;
+  background-color: #f4708d;
+}
+
+.icons a:hover .layer {
+  transform: translateY(-10px); /* Lift the icon */
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2); /* Shadow enhancement */
+}
+
+.icons a .text {
+  margin-top: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.icons a:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+
+.icons a .layer{
+  width: 35px;
+  height: 35px;
+  word-spacing: 5px;
+  transition: transform 0.3s;
+  padding: 10px;
+}
+.icons a:hover .layer{
+  transform:rotate(-23deg) skew(15deg)
+}
+.icons a .layer span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #f94f4f;
+  border-radius: 15px;
+  transition: all  0.3s;
+}
+
+.icons a:hover .layer span:nth-child(1) {
+  opacity: 0.2;
+  transform: translate(5px, -5px);
+}
+.icons a:hover .layer span:nth-child(2) {
+  opacity: 0.4;
+  transform: translate(10px, -10px);
+}
+.icons a:hover .layer span:nth-child(3) {
+  opacity: 0.6;
+  transform: translate(15px, -15px);
+}
+.icons a:hover .layer span:nth-child(4) {
+  opacity: 0.8;  
+  transform: translate(20px, -20px);
+}
+
+/* End Social Header Styles */
+
+/* == Hearder social ==*/
+
+
+
+
 .nav__menu__btn {
   font-size: 1.5rem;
   color: var(--white);
+  background-color: #e57c7c;
   cursor: pointer;
 }
 
@@ -257,7 +367,7 @@ nav {
   display: flex;
   align-items: right;
   align-self: stretch;
-  justify-content: center;
+  justify-content: right;
   flex-direction: column;
   gap: 2rem;
   background-color: var(--primary-color);
