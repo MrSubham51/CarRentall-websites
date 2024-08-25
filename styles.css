@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 
-/* === Start loader ===*/
+/* Start Loader  */
 .preloader {
   position: fixed;
   width: 100%;
@@ -51,14 +51,13 @@
   color: #98db34;
   font-weight: bold;
 }
+/* End Loader*/
 
-/* == loader script == */
 
-
-/*== Start Countdown ==*/
+/* Start Countdown */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f7f4e4;
+  background-color: #f9d0a9;
   color: #fff;
   background-size: cover;
 }
@@ -66,28 +65,33 @@ body {
 .ftco-section {
   padding: 5em 0;
   position: relative;
+  align-items: center;
 }
 
 .counter-wrap {
+  display: inline-block; /* Arrange in a line */
+  margin: 20px 15px; /* Space between counters */
   text-align: center;
+  padding: 60px;
 }
 
 .block-18 .text {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .block-18 .number {
   font-size: 3rem;
   font-weight: 700;
-  color: #fbb710;
+  color: #34a9af;
 }
 
 .block-18 span {
   display: block;
   font-size: 1.1rem;
-  color: #fff;
+  color: #4c613f;
 }
 
+/* count content */
 .ftco-hireme {
   padding: 4em 0;
   background-size: cover;
@@ -100,7 +104,7 @@ body {
   font-size: 1.5rem;
   font-weight: 400;
   color: #000;
-  background-color: #f7f4e4;
+  background-color: transparent;
 }
 
 .btn-primary {
@@ -120,12 +124,13 @@ h2 span {
 h4 {
   color: #fff;
 }
-/*== End Countdown ==*/
+/* End Countdown */
 
 
 
 
 
+/*  navigation */
 :root {
   --primary-color: #fe5b3e;
   --text-dark: #0f172a;
@@ -162,7 +167,7 @@ h4 {
   font-weight: 800;
   color: var(--text-dark);
 }
-
+/* signup btn */
 .btn {
   padding: 0.75rem 1.5rem;
   outline: none;
@@ -177,7 +182,7 @@ h4 {
 }
 
 .btn:hover {
-  background-color: #d6e75b;
+  background-color: #1dcd6c;
 }
 
 img {
@@ -196,7 +201,7 @@ ul {
 
 html,
 body {
-  scroll-behavior: s;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -216,6 +221,8 @@ header::before {
   height: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
   z-index: -1;
+  left: 0%;
+  right: 0%;
 }
 
 nav {
@@ -238,61 +245,69 @@ nav {
 .nav__logo a {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--text-light);
 }
+/* Hearder social */
 
-/* == Hearder social ==*/
+
+
 
 /* Social Header Styles */
 
 .section__container_bar {
   display: flex;
-  flex-direction: column;
-  padding: 20px 0;
-  background-color: #c2daf4; /* Light background for contrast */
-
+  justify-content: space-between; /* Align children to the ends of the container */
+  align-items: center; /* Center the items vertically */
+  padding: 10px 0;
+  background-color: #c2daf4;
 }
 
 .icons {
   display: flex;
-  gap: 25px; /* Space between icons */
+  margin-left: 15px;
+  gap: 25px;
   margin-top: 10px;
   align-items: flex-end;
+}
+
+.header__links {
+  display: flex;
+  align-items: center; /* Center the content vertically */
 }
 
 .icons a {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: right;
+  align-items: center; /* Center align icons */
   text-decoration: none;
   color: inherit;
-  transition: transform 0.3s; /* Smooth transition for hover */
+  transition: transform 0.3s;
 }
 
 .icons a .layer {
   position: relative;
   width: 55px;
   height: 55px;
-  background-color: #eaa5a5; /* Background for the icon */
+  background-color: #eaa5a5;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  box-shadow: 0 0 5px rgba(203, 38, 38, 0.1); /* Shadow for 3D effect */
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+  box-shadow: 0 0 5px rgba(203, 38, 38, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .icons a .layer .fab {
   font-size: 30px;
-  color: #d63636; /* Icon color */
+  color: #d63636;
   background-attachment: fixed;
   background-color: #f4708d;
 }
 
 .icons a:hover .layer {
-  transform: translateY(-10px); /* Lift the icon */
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2); /* Shadow enhancement */
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
 }
 
 .icons a .text {
@@ -302,20 +317,21 @@ nav {
 }
 
 .icons a:hover {
-  transform: scale(1.1); /* Slight zoom effect on hover */
+  transform: scale(1.1);
 }
 
-
-.icons a .layer{
+.icons a .layer {
   width: 35px;
   height: 35px;
   word-spacing: 5px;
   transition: transform 0.3s;
   padding: 10px;
 }
-.icons a:hover .layer{
-  transform:rotate(-23deg) skew(15deg)
+
+.icons a:hover .layer {
+  transform: rotate(-13deg) skew(15deg);
 }
+
 .icons a .layer span {
   position: absolute;
   top: 0;
@@ -324,33 +340,32 @@ nav {
   width: 100%;
   border: 1px solid #f94f4f;
   border-radius: 15px;
-  transition: all  0.3s;
+  transition: all 0.3s;
 }
 
 .icons a:hover .layer span:nth-child(1) {
   opacity: 0.2;
   transform: translate(5px, -5px);
 }
+
 .icons a:hover .layer span:nth-child(2) {
   opacity: 0.4;
   transform: translate(10px, -10px);
 }
+
 .icons a:hover .layer span:nth-child(3) {
   opacity: 0.6;
   transform: translate(15px, -15px);
 }
+
 .icons a:hover .layer span:nth-child(4) {
-  opacity: 0.8;  
+  opacity: 0.8;
   transform: translate(20px, -20px);
 }
-
 /* End Social Header Styles */
 
-/* == Hearder social ==*/
 
-
-
-
+/* Start nav bar*/
 .nav__menu__btn {
   font-size: 1.5rem;
   color: var(--white);
@@ -363,17 +378,17 @@ nav {
   top: 100%;
   left: 0;
   width: 100%;
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   align-items: right;
   align-self: stretch;
   justify-content: right;
   flex-direction: column;
   gap: 2rem;
-  background-color: var(--primary-color);
+  background-color: var(--text-light);
   transition: 0.5s;
   z-index: -1;
-  transform: translateY(100%);
+  transform: translateY(-100%);
 }
 
 .nav__links.open {
@@ -383,17 +398,52 @@ nav {
 .nav__links a {
   font-weight: 700;
   color: var(--primary-color);
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+
+.nav__links a:hover {
+  color: #e18f23; /* Change color on hover */
 }
 
 .nav__links .btn {
-  padding: 0;
-  background-color: transparent;
+  padding: 10px 20px;
+  background-color: #FFD700; /* Yellow color for Sign Up button */
+  color: #f3e8e8; /* Text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.btn {
+  padding: 10px 20px;
+  background-color: #FFD700; /* Yellow color for Sign Up button */
+  color: #000; /* Text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #1dcd6c;
+}
+
+.nav__links .btn:hover {
+  background-color: #FFC107; /* Slightly darker yellow for hover effect */
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .nav__btns {
   display: none;
 }
+/* End nav bar*/
 
+
+
+/* Start header content */
 .header__container {
   display: grid;
   gap: 2rem 0;
@@ -452,8 +502,15 @@ nav {
   border-radius: 5px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
 }
+/* End header content */
+
+/* End header */
+
 
 .steps__container :is(.section__subheader, .section__header) {
+  text-align: center;
+}
+.section__subheader{
   text-align: center;
 }
 

@@ -1,3 +1,4 @@
+// Menu Button Toggle
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
@@ -14,6 +15,7 @@ navLinks.addEventListener("click", (e) => {
   menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
 
+// ScrollReveal Animations
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
@@ -24,14 +26,17 @@ ScrollReveal().reveal(".header__image img", {
   ...scrollRevealOption,
   origin: "right",
 });
+
 ScrollReveal().reveal(".header__content h1", {
   ...scrollRevealOption,
   delay: 500,
 });
+
 ScrollReveal().reveal(".header__content p", {
   ...scrollRevealOption,
   delay: 1000,
 });
+
 ScrollReveal().reveal(".header__links", {
   ...scrollRevealOption,
   delay: 1500,
@@ -46,14 +51,17 @@ ScrollReveal().reveal(".service__image img", {
   ...scrollRevealOption,
   origin: "left",
 });
+
 ScrollReveal().reveal(".service__content .section__subheader", {
   ...scrollRevealOption,
   delay: 500,
 });
+
 ScrollReveal().reveal(".service__content .section__header", {
   ...scrollRevealOption,
   delay: 1000,
 });
+
 ScrollReveal().reveal(".service__list li", {
   ...scrollRevealOption,
   delay: 1500,
@@ -69,23 +77,18 @@ ScrollReveal().reveal(".download__image img", {
   ...scrollRevealOption,
   origin: "right",
 });
+
 ScrollReveal().reveal(".download__content .section__header", {
   ...scrollRevealOption,
   delay: 500,
 });
+
 ScrollReveal().reveal(".download__content p", {
   ...scrollRevealOption,
   delay: 1000,
 });
+
 ScrollReveal().reveal(".download__links", {
   ...scrollRevealOption,
   delay: 1500,
 });
-
-
-/*PRELOADER JS*/
-$(window).on('load', function() {  
-  $('.spinner').fadeOut();
-  $('.preloader').delay(350).fadeOut('slow');
-}
- 

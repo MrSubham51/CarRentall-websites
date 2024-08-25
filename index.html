@@ -98,8 +98,19 @@
               <span></span>
               <span></span>
               <span></span>
-              <span class="fab fa-telegram">
+              <span class="fab fa-google">
                 <div class="ri-google-fill"></div>
+              </span>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="layer">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span class="fab fa-linkedin">
+                <div class="ri-linkedin-fill"></div>
               </span>
             </div>
           </a>
@@ -116,11 +127,8 @@
         
       </div>
       <!-- End Social Header -->
-
-       
-
-      <!-- End Social Header -->
-
+      
+      <!-- Navigation-->
       <nav>
         <div class="nav__header">
           <div class="nav__logo">
@@ -136,12 +144,10 @@
           <li><a href="#service">Services</a></li>
           <li><a href="#ride">Ride</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li class="nav__links__btn">
-            <button class="btn" src="login.html">Sign Up</button>
-          </li>
         </ul>
+        
         <div class="nav__btns">
-          <button type="button" class="btn btn-outline-primary">Sign up</button>
+          <button class="btn btn__secondary">Sign In</button>
         </div>
       </nav>
 
@@ -306,43 +312,44 @@
   <!-- Start Countdown Section -->
   <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
     <div class="container">
-      <div class="row d-md-flex align-items-center">
-        <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+      <div class="row d-md-flex justify-content-center">
+        <div class="col-md-auto counter-wrap ftco-animate">
           <div class="block-18">
             <div class="text">
-              <strong class="number" data-number="2600">2600+</strong>
+              <strong class="number" data-number="2600">0</strong>
               <span>Achievements</span>
             </div>
           </div>
         </div>
-        <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="col-md-auto counter-wrap ftco-animate">
           <div class="block-18">
             <div class="text">
-              <strong class="number" data-number="2500">2500+</strong>
-              <span>Satisify Customer</span>
+              <strong class="number" data-number="2507">0</strong>
+              <span>Satisfy Customer</span>
             </div>
           </div>
         </div>
-        <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="col-md-auto counter-wrap ftco-animate">
           <div class="block-18">
             <div class="text">
-              <strong class="number" data-number="2000">2000+</strong>
+              <strong class="number" data-number="3159">0</strong>
               <span>Services</span>
             </div>
           </div>
         </div>
-        <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="col-md-auto counter-wrap ftco-animate">
           <div class="block-18">
             <div class="text">
-              <strong class="number" data-number="500">500+</strong>
+              <strong class="number" data-number="507">0</strong>
               <span>Cups of Coffee's</span>
             </div>
           </div>
         </div>
+
       </div>
     </div>
-
-    <div class="ftco-section ftco-hireme img margin-center" style="background-image: url(' enter image ');">
+  
+    <div class="ftco-section ftco-hireme img margin-center" style="background-image: url('countimg1.jpg');">
       <div class="row justify-content-center">
         <div class="col-md-7 ftco-animate text-center">
           <h2>Review's on <span>RentaliCar_e</span></h2>
@@ -351,7 +358,9 @@
           <div class="heading">
             <h4>I thrive on solving business challenges and uncovering hidden data insights.</h4>
             <br>
-            <p><a href="#" class="btn btn-primary py-3 px-5">RentaliCar e</a></p>
+            <p>
+              <button type="button" class="btn btn-outline-warning py-3 px-3">RentaliCar e</button>
+            </p>
           </div>
         </div>
       </div>
@@ -359,9 +368,7 @@
   </section>
   <!-- End Countdown Section -->
 
-
-
-  <!-- Download app section-->
+   <!-- Download app section-->
   <section class="section__container download__container" id="contact">
     <div class="download__grid">
       <div class="download__content">
@@ -386,6 +393,8 @@
   </section>
   <!-- End Download app Section -->
 
+
+  
   <!-- Start Footer Section -->
   <footer>
     <div class="section__container footer__container">
@@ -455,6 +464,7 @@
   <!-- End Footer Section -->
 
 
+
   <!-- Go to Top Button -->
   <a href="#" class="btn btn-danger back-to-top" role="button">
     <i class="ri-arrow-up-line">Top</i>
@@ -493,6 +503,33 @@
       border-radius: 10rem;
     }
   </style>
+  
+  <!-- Countdown  section -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const counters = document.querySelectorAll('.number');
+  
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = parseInt(counter.getAttribute('data-number'), 10);
+          let count = parseInt(counter.innerText, 10);
+  
+          // Calculate increment
+          const increment = Math.ceil(target / 100);  // Ensure increment is a whole number
+  
+          if (count < target) {
+            counter.innerText = count + increment > target ? target : count + increment;
+            setTimeout(updateCount, 20);  // Adjust delay for smoother animation
+          } else {
+            counter.innerText = target;  // Ensure the target number is set correctly
+          }
+        };
+  
+        updateCount();
+      });
+    });
+  </script>
+  <!-- End Countdown Section -->
 
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="main.js"></script>
